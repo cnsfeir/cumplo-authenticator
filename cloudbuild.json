@@ -1,0 +1,18 @@
+{
+  "steps": [
+    {
+      "name": "gcr.io/google.com/cloudsdktool/cloud-sdk",
+      "args": [
+        "gcloud",
+        "functions",
+        "deploy",
+        "get-authentication-cookie",
+        "--region=us-central1",
+        "--gen2",
+        "--runtime",
+        "nodejs18",
+        "--trigger-http"
+      ]
+    }
+  ]
+}
