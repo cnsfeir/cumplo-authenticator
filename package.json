@@ -1,8 +1,10 @@
 {
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm install && tsc",
-    "start": "functions-framework --target=TypescriptFunction",
+    "build": "tsc",
+    "compile": "tsc",
+    "start-dev": "concurrently \"tsc -w\" \"nodemon --watch ./dist/ --exec npm run start\"",
+    "start": "functions-framework --source=dist/src/ --target=getAuthenticationCookie",
     "prestart": "npm run build",
     "gcp-build": "npm run build"
   },

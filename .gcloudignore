@@ -1,0 +1,15 @@
+.gcloudignore
+.git
+.gitignore
+.github
+README.md
+pull_request_template.md
+/tests/
+/node_modules/
+/src/
+tslint.json
+nodemon.json
+Dockerfile.dev
+.eslintrcf.json
+.prettierrc.js
+.eslintignore
