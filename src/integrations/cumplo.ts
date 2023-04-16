@@ -1,7 +1,7 @@
 import { env } from 'node:process'
 import puppeteer from 'puppeteer'
 
-async function getAuthorizationCookie(): Promise<string | null> {
+async function getAuthenticationCookie(): Promise<string | null> {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
@@ -35,4 +35,4 @@ async function getAuthorizationCookie(): Promise<string | null> {
   return sessionCookie ? sessionCookie.value : null
 }
 
-export default getAuthorizationCookie
+export default getAuthenticationCookie
