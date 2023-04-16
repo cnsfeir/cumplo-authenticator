@@ -1,5 +1,5 @@
 import { Request, Response, http } from '@google-cloud/functions-framework'
-import getAuthorizationCookie from './src/integrations/cumplo'
+import getAuthorizationCookie from './integrations/cumplo'
 
 http('TypescriptFunction', (request: Request, response: Response) => {
   const cookie = getAuthorizationCookie()
