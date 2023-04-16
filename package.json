@@ -4,13 +4,15 @@
     "build": "npm install && tsc",
     "start": "functions-framework --target=TypescriptFunction",
     "prestart": "npm run build",
-    "gcp-build": "node node_modules/puppeteer/install.js"
+    "gcp-build": "npm run build && node node_modules/puppeteer/install.js",
+    "run-dev": "concurrently \"tsc -w\" \"nodemon --watch ./dist/ --exec npm run start\""
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
     "@types/puppeteer": "^7.0.4",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.58.0",
+    "concurrently": "^8.0.1",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^34.0.1",
     "eslint-plugin-import": "^2.25.2",
