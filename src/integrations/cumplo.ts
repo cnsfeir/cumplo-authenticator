@@ -5,14 +5,14 @@ async function getAuthorizationCookie(): Promise<string | null> {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
+  const EMAIL = env.EMAIL as string
   const CUMPLO_LOGIN_URL = env.CUMPLO_LOGIN_URL as string
-  await page.goto(CUMPLO_LOGIN_URL)
+  await page.goto(`${CUMPLO_LOGIN_URL}${EMAIL}`)
 
   await page.setViewport({ width: 1080, height: 1024 })
 
   const emailSelector = '#user_email'
   await page.waitForSelector(emailSelector)
-  const EMAIL = env.EMAIL as string
   await page.type(emailSelector, EMAIL)
 
   const passwordSelector = '#user_password'
