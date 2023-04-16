@@ -1,10 +1,10 @@
 {
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "tsc",
     "compile": "tsc",
-    "start-dev": "concurrently \"tsc -w\" \"nodemon --watch ./dist/ --exec npm run start\"",
-    "start": "functions-framework --source=dist/src/ --target=getAuthenticationCookie",
+    "start-dev": "concurrently \"tsc -w\" \"nodemon --watch ./build/ --exec npm run start\"",
+    "start": "functions-framework --source=build/src/ --target=getAuthenticationCookie",
     "prestart": "npm run build",
     "gcp-build": "npm run build"
   },
