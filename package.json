@@ -2,6 +2,9 @@
   "main": "dist/index.js",
   "license": "AGPL-3.0",
   "scripts": {
+    "build": "npm install && tsc",
+    "prestart": "npm run build",
+    "gcp-build": "npm run build && node node_modules/puppeteer/install.js",
     "compile": "tsc",
     "locally": "tsc && node dist/index.js",
     "start": "functions-framework --source=dist/ --target=getCumploAuthenticationCookie"
