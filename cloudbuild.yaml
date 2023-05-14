@@ -1,0 +1,26 @@
+steps:
+  - name: 'gcr.io/cloud-builders/yarn'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/yarn'
+    args: ['run', 'compile']
+  - name: 'bash'
+    args: [cp, 'package.json', 'build']
+  - name: 'bash'
+    args: [cp, 'yarn.lock', 'build']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      [
+        'beta',
+        'functions',
+        'deploy',
+        'get-authentication-cookie',
+        '--gen2',
+        '--runtime',
+        'nodejs18',
+        '--trigger-http',
+        '--entry-point',
+        'main',
+        '--region',
+        'us-central1',
+        '--source=.',
+      ]
