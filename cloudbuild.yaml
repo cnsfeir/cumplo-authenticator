@@ -19,7 +19,7 @@ steps:
         'nodejs18',
         '--trigger-http',
         '--entry-point',
-        'main',
+        'getCumploAuthenticationCookie',
         '--region',
         'us-central1',
         '--source=.',
