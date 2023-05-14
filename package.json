@@ -1,13 +1,13 @@
 {
-  "main": "dist/index.js",
+  "main": "build/src/index.js",
   "license": "AGPL-3.0",
   "scripts": {
     "build": "npm install && tsc",
     "prestart": "npm run build",
     "gcp-build": "npm run build && node node_modules/puppeteer/install.js",
     "compile": "tsc",
-    "locally": "tsc && node dist/index.js",
-    "start": "functions-framework --source=dist/ --target=getCumploAuthenticationCookie"
+    "locally": "tsc && node build/src/index.js",
+    "start": "functions-framework --source=build/src/ --target=getCumploAuthenticationCookie"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
