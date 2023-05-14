@@ -2,6 +2,7 @@
   "main": "build/src/index.js",
   "license": "AGPL-3.0",
   "scripts": {
+    "build": "npm install && tsc",
     "compile": "tsc",
     "locally": "tsc && node build/src/index.js",
     "start": "functions-framework --source=build/src/ --target=getCumploAuthenticationCookie"
