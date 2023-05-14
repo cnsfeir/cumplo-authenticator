@@ -16,7 +16,7 @@ steps:
         'get-authentication-cookie',
         '--gen2',
         '--runtime',
-        'nodejs18',
+        'nodejs16',
         '--trigger-http',
         '--entry-point',
         'getCumploAuthenticationCookie',
