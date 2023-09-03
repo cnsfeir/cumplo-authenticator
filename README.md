@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/cnsfeir/cumplo-authenticator/assets/58790635/97f83a3c-b33d-4518-b956-334a7c871da0" height="141"/>
+  <img src="https://github.com/cnsfeir/cumplo-authenticator/assets/58790635/97f83a3c-b33d-4518-b956-334a7c871da0" height="130"/>
 </div>
 
 <br>
