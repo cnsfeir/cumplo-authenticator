@@ -1,21 +1,20 @@
 {
   "steps": [
-    {
+  {
       "name": "gcr.io/google.com/cloudsdktool/cloud-sdk",
       "args": [
         "gcloud",
         "functions",
         "deploy",
-        "get-authentication-cookie",
-        "--gen2",
+        "cumplo-authenticator",
+        "--region=us-central1",
+        "--gen1",
         "--runtime",
-        "nodejs18",
-        "--trigger-http",
+        "python311",
         "--entry-point",
-        "getCumploAuthenticationCookie",
-        "--region",
-        "us-central1",
-        "--source=."
+        "get_authentication_cookie",
+        "--source=.",
+        "--trigger-http"
       ]
     }
   ]
